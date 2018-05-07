@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+    <location id="1" name="Forest of dsadsadTress" info="A forest." characters="A hunter (John BonJovi) and his family." image="/map_of_the_forest_by_katarya.png" sublocations="/forest.png, /forest.png"/>
+    <location id="2" name="Falcrest" info="A town." characters="Lots'a people." image="/forest.png"/>
+</root>

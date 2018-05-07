@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html style="background: url('images/d20.jpg') 10%;">
+    <head>
+        <title>Main</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="datetime.js"></script>
+    </head>
+    <body onload="showTime('time');showDate('date');">
+        <script>
+            function changeIFrame(dest){
+                document.getElementById("navIFrame").setAttribute("src",dest);
+            }
+        </script>
+  <ul id="NavBar" >
+      <li class="NavBarElement"><a onclick="changeIFrame('Main.html')">Home</a></li>
+            <li class="NavBarElement"><a onclick="changeIFrame('Characters.html')">Characters</a></li>
+            <li class="NavBarElement"><a onclick="changeIFrame('Locations.html')">Locations</a></li>
+            <li class="NavBarElement"><a onclick="changeIFrame('Quests.html')">Quests</a></li>
+            <li class="NavBarElement"><a onclick="changeIFrame('Items.html')">Items</a></li>
+            <li class="NavBarElement"><a onclick="changeIFrame('PCs.html')">PCs</a></li>
+            <li class="NavBarDateTime" style="float:right" id="time" >time</li>
+            <li class="NavBarDateTime" style="float:right" id="date" >date</li>
+        </ul>
+<div id="siteContent">
+
+         <iframe id="navIFrame" src="Main.html"></iframe>
+    
+</div>
+</body>
+</html>

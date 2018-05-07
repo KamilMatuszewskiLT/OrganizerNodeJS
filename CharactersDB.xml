@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<root>
+    <character id="1" name="John BonJovi" height="1.87" weight="78" unique="Has six fingers." home="Falcrest"/>
+    <character id="2" name="Tom BonJovi" height="1.87" weight="78" unique="Has six fingers."/>
+    <character id="3" name="Ben Booth" height="1.97" weight="90" unique="Crooked nose."/>
+    <character id="4" name="Jonah Jameson" height="1.57" weight="70" unique="Crooked nose, two legs, two hands, one head, some other stuff."/>
+    <character id="5" name="Dorothy McOzz" height="1.67" weight="92" unique="Crooked nose."/>
+    <character id="6" name="Anne Enna" height="1.91" weight="91" unique="Crooked nose."/>
+</root>

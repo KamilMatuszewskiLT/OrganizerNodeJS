@@ -1,0 +1,275 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-04-09, 09:20:27
+    Author     : Kamil Matuszewski
+*/
+html{
+    
+}
+body{
+    font-family: Arial;
+}
+
+
+#siteContent{
+    border-left: dotted black 1px;
+    border-right: dotted black 1px;
+    margin-left: 150px;
+    padding-left: 50px;
+    margin-right: 150px;
+    margin-top: 20px;
+    background:rgba(248, 248, 255, 0.85);
+}
+
+#PageTitle{
+    font-size: 20px;
+}
+#NavBar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #81717A;
+    color: #B4D4EE;
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+}
+
+.NavBarElement{
+    display: inline-block;
+    padding:8px;
+}
+.NavBarElement:hover{
+    background-color: #9D8CA1;
+    cursor: pointer;
+}
+.NavBarElement a{
+    text-decoration: none;
+    color: #B4D4EE;
+}
+
+.NavBarDateTime{
+    display: inline-block;
+    padding:8px;
+}
+#navIFrame{
+    width:100%;
+    height:1000px;
+    border: none;
+}
+
+#characterList{
+    clear: both;
+    padding: 2px;
+}
+
+#dataContainer{
+    clear:both;
+}
+
+#allButtonsContainer{
+    clear: both;
+}
+
+#characterData{
+    display: box;
+}
+
+.charRecord{
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align:center;
+    font-size: 16px;
+}
+.dataType{
+    color: #7F636E ;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 4px;
+    background-color: antiquewhite;
+    border-bottom: dotted 1px black;
+    margin: 2px;
+}
+.dataType:not(:first-child){
+    border-top: dotted 1px black;
+}
+.dataField{
+    color: #7F636E;
+    padding-left: 5px;
+    padding-right: 10px;
+    padding: 4px;
+    background-color: beige;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.dataField::nth-child(2){
+    border-bottom: dotted 1px black;
+}
+
+.inputFields{
+    color: #7F636E;
+    display: table-cell;
+    padding-left: 5px;
+    padding-right: 10px;
+    border-right: solid 5px white;
+}
+
+.charRecord .dataField:last-child{
+    border-right: none;
+}
+
+.recordNames {
+    color: #444;
+    cursor: pointer;
+    padding: 4px;
+    margin: 1px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    border-right: dotted 1px black;
+    width: 300px; /* width of .record - 24px */
+}
+.record{
+    width: 324px; /* width of .record + 24px */
+    margin: 4px;
+    border: solid 1px black;
+    background-color: antiquewhite;
+}
+
+.mapImage{
+    height: auto; /* width of .record width */
+    max-width: 285px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.smallMapImage{
+    height: auto; /* width of .record width */
+    max-width: 135px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.smallMapImage:hover {opacity: 0.7;}
+
+.mapImage:hover {opacity: 0.7;}
+
+
+.buttonContainer {
+    float: left;
+    background-color: beige;
+    margin: 5px;
+    padding-right: 2px;
+    border: 1px solid black;
+}
+
+
+.content {
+    overflow: hidden;
+    display: inline-block;
+    font-family: Arial;
+    float: none; 
+}
+.imgWrap{
+    text-align: center;
+}
+.toggleButton{
+    background-color: lightcoral;
+    cursor: pointer;
+    width: 120px;
+    height: 36px;
+    overflow: hidden;
+    border:none;
+    margin:2px;
+    margin-bottom: 4px;
+    font-size: 0.92em;
+    font-family: Arial;
+    float: left;
+}
+.checkBoxResetButton{
+    background-color: lightcoral;
+    cursor: pointer;
+    width: 120px;
+    height: 36px;
+    overflow: hidden;
+    border:none;
+    margin:2px;
+    margin-bottom: 4px;
+    font-size: 0.92em;
+    font-family: Arial;
+    float: left;
+}
+
+.toggled{
+    background-color: lightseagreen;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+} 
+
+
